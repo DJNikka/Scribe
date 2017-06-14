@@ -38,7 +38,23 @@
                                     <constraint firstItem="3Kr-SO-Iaj" firstAttribute="centerX" secondItem="Hgj-ZW-PoO" secondAttribute="centerX" id="pex-kV-x5H"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Play &amp; Transcribe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJx-C0-dCc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sza-Xe-yAX" customClass="CircleButton" customModule="Scribe" customModuleProvider="target">
+                                <rect key="frame" x="157" y="561" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.45602951397220781" green="0.79672369513522567" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="eRa-du-FnO"/>
+                                    <constraint firstAttribute="height" constant="60" id="rGd-Or-zk3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECr-69-jai"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play &amp; Transcribe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJx-C0-dCc">
                                 <rect key="frame" x="103.5" y="629" width="167" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XYj-Tb-qs9"/>
@@ -47,36 +63,42 @@
                                 <color key="textColor" red="0.27152611925194303" green="0.27730327072538863" blue="0.27730327072538863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pfg-Tc-HL6">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button below to transcribe the audio embedded in this app." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pfg-Tc-HL6">
                                 <rect key="frame" x="10" y="65" width="355" height="486"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.34099740932642486" green="0.34099740932642486" blue="0.34099740932642486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sza-Xe-yAX">
-                                <rect key="frame" x="157" y="561" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.45602951397220781" green="0.79672369513522567" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vPJ-vo-FhM">
+                                <rect key="frame" x="157.5" y="561.5" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="eRa-du-FnO"/>
-                                    <constraint firstAttribute="height" constant="60" id="rGd-Or-zk3"/>
+                                    <constraint firstAttribute="width" constant="60" id="Wh6-VZ-aJy"/>
+                                    <constraint firstAttribute="height" constant="60" id="nLl-jm-X2o"/>
                                 </constraints>
-                            </button>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pfg-Tc-HL6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="00y-J3-IoG"/>
                             <constraint firstItem="pfg-Tc-HL6" firstAttribute="top" secondItem="Hgj-ZW-PoO" secondAttribute="bottom" constant="10" id="5Cn-MP-sJG"/>
                             <constraint firstAttribute="trailing" secondItem="pfg-Tc-HL6" secondAttribute="trailing" constant="10" id="9hn-5J-nlz"/>
+                            <constraint firstItem="vPJ-vo-FhM" firstAttribute="centerY" secondItem="Sza-Xe-yAX" secondAttribute="centerY" id="L30-Fn-ml8"/>
                             <constraint firstItem="Sza-Xe-yAX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TJb-mN-dtd"/>
                             <constraint firstItem="Sza-Xe-yAX" firstAttribute="top" secondItem="pfg-Tc-HL6" secondAttribute="bottom" constant="10" id="aEX-EC-9rh"/>
                             <constraint firstItem="Hgj-ZW-PoO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bWn-dJ-LXJ"/>
+                            <constraint firstItem="DJx-C0-dCc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="btw-bh-VpG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DJx-C0-dCc" secondAttribute="bottom" constant="8" id="dVA-BK-3bS"/>
                             <constraint firstAttribute="trailing" secondItem="Hgj-ZW-PoO" secondAttribute="trailing" id="hyv-XW-f2t"/>
+                            <constraint firstItem="vPJ-vo-FhM" firstAttribute="centerX" secondItem="Sza-Xe-yAX" secondAttribute="centerX" id="kQU-s5-BVg"/>
                             <constraint firstItem="DJx-C0-dCc" firstAttribute="top" secondItem="Sza-Xe-yAX" secondAttribute="bottom" constant="8" id="uHi-V2-7lX"/>
                             <constraint firstItem="Hgj-ZW-PoO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wS7-KW-dy1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="vPJ-vo-FhM" id="pH7-xr-O2N"/>
+                        <outlet property="transcriptionTextField" destination="pfg-Tc-HL6" id="CAu-zf-3jl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
